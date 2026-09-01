@@ -11,10 +11,10 @@ Arcade Vault ("Es una plataforma para jugar online y competir por la mayor canti
 ## Commands
 
 ```bash
-npm run dev      # start dev server (next dev)
-npm run build    # production build
-npm run start    # run production build
-npm run lint      # eslint (flat config, eslint.config.mjs)
+pnpm dev      # start dev server (next dev)
+pnpm build    # production build
+pnpm start    # run production build
+pnpm lint     # eslint (flat config, eslint.config.mjs)
 ```
 
 No test framework is configured in this repo.
