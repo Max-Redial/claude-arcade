@@ -141,6 +141,8 @@ a {
 /* ===== app frame ===== */
 .av-main {
   flex: 1;
+  position: relative;
+  z-index: 1;
 }
 
 /* ===== pixel + neon text ===== */

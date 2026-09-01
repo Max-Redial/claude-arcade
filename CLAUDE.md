@@ -19,6 +19,8 @@ pnpm lint     # eslint (flat config, eslint.config.mjs)
 
 No test framework is configured in this repo.
 
+Playwright screenshots go in `.playwright-screenshoots/` (save/take screenshots there, not elsewhere).
+
 ## Architecture
 
 - Next.js 16 App Router, React 19, TypeScript (strict), Tailwind CSS v4 (via `@tailwindcss/postcss`, no `tailwind.config`).
