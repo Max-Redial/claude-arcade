@@ -26,6 +26,10 @@ No test framework is configured in this repo.
 - Path alias `@/*` maps to the repo root (see `tsconfig.json`).
 - Per `AGENTS.md`, this Next.js version may have breaking changes vs. training data — check `node_modules/next/dist/docs/` before relying on remembered Next.js APIs/conventions.
 
+## skills
+
+usa siempre /frontent-design para hacer interfaces de usuario
+
 ## Design reference (`resources/`)
 
 `resources/resources/templates/` is a **standalone static prototype** (plain HTML + React loaded from a CDN + in-browser Babel — not part of the Next.js app, not wired into the build) that defines the intended product design and data model. Open `resources/resources/templates/Arcade Vault.html` directly in a browser to view it. Treat it as the spec for the real App Router implementation:
