@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Press_Start_2P, JetBrains_Mono, Courier_Prime } from "next/font/google";
+import { AppBackground } from "@/components/app-background";
+import { AuthProvider } from "@/components/auth-provider";
+import { Nav } from "@/components/nav";
 import "./globals.css";
 
 const pressStart2P = Press_Start_2P({
@@ -25,7 +28,7 @@ const courierPrime = Courier_Prime({
 export const metadata: Metadata = {
   title: "Arcade Vault · Portal Retro",
   description:
-    "Arcade Vault — plataforma para jugar online y competir por la mayor cantidad de puntos.",
+    "Plataforma para jugar online y competir por la mayor cantidad de puntos.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -35,9 +38,24 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${pressStart2P.variable} ${jetBrainsMono.variable} ${courierPrime.variable}`}
     >
       <body>
-        <div className="av-bg" />
-        <div className="av-noise" />
-        <div id="root">{children}</div>
+        <AppBackground />
+        <AuthProvider>
+          <Nav />
+          <main className="av-main">{children}</main>
+          <footer
+            style={{
+              borderTop: "1px solid var(--line)",
+              padding: "20px 32px",
+              textAlign: "center",
+              color: "var(--ink-faint)",
+              fontFamily: "var(--mono)",
+              fontSize: 11,
+              letterSpacing: "0.16em",
+            }}
+          >
+            © 2026 ARCADE VAULT · HECHO CON PIXELES Y NEÓN · v2.6.0
+          </footer>
+        </AuthProvider>
       </body>
     </html>
   );
